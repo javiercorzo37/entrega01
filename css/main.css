@@ -1,0 +1,403 @@
+
+:root{
+    --color-primario: #fff;
+    --boton-primario: #2f80ed;  
+    --fondo: #f3ebeb;
+    --barra-progreso: #c4c4c4;
+    --letra-secundaria: #828282;
+    --letra-primaria:#0000;
+    --main-font: 'Montserrat', sans-serif;  
+    --transition: color 0.1s, background-color 0.2s;
+    --skills-bar-length: 0%
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--fondo);
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.wrapper{
+    padding: 1rem 1rem;
+    margin: 0 auto;
+    
+}
+
+header{
+    width: 498px;
+    height: 662px;
+    margin-bottom: 1.5rem;
+    background-color: var(--color-primario);
+    border-radius: 12px;
+}
+.cont-perfil{
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.perfil{
+    margin-top: 20px;
+    margin-left: 15%;
+}
+
+.nombre {
+    color: black;
+    margin-top: 30px;
+    margin-left: 3.5rem;
+    font-size: 24px;
+}
+
+.juntar{
+    line-height: 0.1;
+}
+
+.fuerte{
+    color: black;
+    font-size: 18px;
+    margin-left: 3.5rem;
+    line-height: 0.1;
+    padding-bottom: 1rem;
+}
+
+
+.debil{
+    color: #828282;
+    font-size: 18px;
+    margin-left: 3.5rem;
+}
+
+
+.debil1{
+    color: #828282;
+    font-size: 18px;
+    margin-left: 3.5rem;
+    display: none;
+}
+
+.debil2{
+    color: #828282;
+    font-size: 18px;
+    margin-left: 3.5rem;
+    padding-bottom: 2rem;
+}
+
+.titulo-skills{
+    font-size: 24px;
+    color: #4f4f4f;
+    margin-left: 5%;
+}
+
+.skills{
+    margin-bottom: 1.5rem;
+    width: 498px;
+    background-color: var(--color-primario);
+    border-radius: 15px;
+}
+
+.columna{
+
+    display: grid;
+    gap: 0.5em;
+
+}
+
+.skills{
+    padding: 1em 0;
+}
+
+.skill1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.skills-bar,
+.skills-bar::after{
+    position: relative;
+    width: 300px;
+    height: 8px;
+    background-color: #828282;
+    overflow: hidden;
+}
+
+.skills-bar::after{
+    content: '';
+    position: absolute;
+    left: -300px;
+    background-color: #2f80ed;
+    transition: var(--transition);
+    animation: skills-bar-fill 1s ease-in-out forwards;
+}
+
+.skills-90::after{
+    --skills-bar-length:90%
+}
+
+.skills-70::after{
+    --skills-bar-length:60%
+}
+
+.skills-70::after{
+    --skills-bar-length:90%
+}
+
+.skills-60::after{
+    --skills-bar-length:60%
+}
+
+@keyframes skills-bar-fill{
+    to{
+        transform: translateX(var(--skills-bar-length));
+    }
+}
+
+.proyectos{
+    width: 462px;
+    height: 139px;
+    border-radius: 12px;
+    padding: 16px;
+    gap: 32px;
+    background-color: var(--color-primario);
+    font-size: 24px;
+    margin-bottom: 1.5rem;
+
+}
+
+.titulo-boton{
+    width: 153px;
+    height: 29px;
+    font-size: 24px;
+}
+
+.boton-primario{
+    width: 135px;
+    height: 45px;
+    background-color: #2f80ed;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 8px;
+    border: 1px solid #4f4f4f;
+}
+
+
+.boton-secundario{
+    width: 135px;
+    height: 45px;
+    background-color: #fff;
+    font-size: 18px;
+    color: #4f4f4f;
+    border-radius: 8px;
+    margin-left:2%;
+    border: 1px solid #4f4f4f;
+}   
+
+.proyectos-muestra{
+    width: 462px;
+    height: 645px;
+    background-color: var(--color-primario);
+    border-radius: 12px;
+    padding: 16px;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.proyecto{
+    width: 430px;
+    height: 630px;
+    gap: 16px;
+    margin-top: 30px;
+    margin-left: 1.5rem
+    
+}
+
+.img-proyecto{
+    margin-top: 1rem;
+    width: 420px;
+}
+
+.tags{
+    font-size: 16px;
+    color: #4f4f4f;
+    
+}
+
+.titulo-proyecto{
+    font-size: 24px;
+}
+
+.descripcion-proyecto{
+    width: 500;
+    font-size: 18px;
+    line-height: 21.94px;
+    color: var(--letra-secundaria);
+}
+
+.boton-proyecto1{
+    width: 135px;
+    height: 45px;
+    border-radius: 12px;
+    color: white;
+    border: 1px solid #2f80ed;
+    background-color: var(--boton-primario);
+    font-size: 18px;
+    line-height: 21.94px;
+}
+
+.boton-proyecto2{
+    width: 135px;
+    height: 45px;
+    border-radius: 12px;
+    color: #2f80ed;
+    border: 1px solid #2f80ed;
+    background-color:white;
+    font-size: 18px;
+    line-height: 21.94px;
+}
+
+.proyecto2{
+    display: none;
+}
+
+.experiencia{
+    width: 462px;
+    height: 329px;
+    padding: 16px;
+    gap: 16px;
+    margin-bottom: 1.5rem;
+    background-color: var(--color-primario);
+    border-radius: 12px;
+    font-size: 24px;
+}
+
+.exp-titulo{
+    font-size: 24px;
+    color: #4f4f4f;
+}
+
+.conte-art{
+    width: 430px;
+    height: 252;
+    padding: 0px, 16px, 0px, 16px;
+    display: inline-flex;
+    
+}
+
+.nuevo-articulo{
+    width: 398px;
+    height: 252px;
+    padding: 8px;
+    border: 1px solid #c4c4c4;
+    border-radius: 12px;
+}
+
+.art{
+    width: 191px;
+    height: 236px;
+    padding: 4px;
+    gap: 6px;
+}
+
+.articulo-img{
+    width: 55px;
+    height: 36.84px;
+    margin-left: 20%;
+    margin-top: 30%;
+}
+
+.art-2{
+    width: 178px;
+    height: 51px;
+    padding: 4px;
+    gap: 6px;
+}
+
+.descripcion-art{
+    width: 155px;
+    height: 17px;
+    font-size: 14px;
+    color: #828282;
+}
+
+.titulo-art{
+    width: 170px;
+    height: 20px;
+    font-size: 16px;
+}
+
+.descripcion-articulo{
+    width: 191px;
+    height: 136px;
+    font-size: 16px;
+    color: #828282;
+    margin-top: 10%;
+}
+
+.nuevo-articulo1{
+    display: none;
+}
+
+.certificado{
+    width: 462px;
+    height: 412px;
+    border-radius: 12px;
+    padding: 16px;
+    gap: 16px;
+    background-color: var(--color-primario);
+
+}
+
+.titulo-cert{
+    font-size: 24px;
+    color: #4f4f4f;
+}
+
+.nuevo-certificado{
+    width: 430px;
+    height: 335px;
+    gap:24px;
+}
+
+.certificado-img{
+    width: 430px;
+    height: 260px;
+    border: 1px solid #c4c4c4;
+    border-radius: 12px;
+
+}
+
+.imge{
+    width: 400px;
+    height: 260px;
+    margin-left: 3%;
+}
+
+.desc-cert{
+    width: 430px;
+    height: 51px;
+    padding: 4px;
+    gap: 6px;
+}
+
+.titulo-certificado{
+    width: 170px;
+    height: 20px;
+    font-size: 16px;
+    line-height: 3;
+}
+
+.descripcion-titulo{
+    width: 140px;
+    height: 17px;
+    font-size: 14px;
+    color: #828282;
+}
+
+.nuevo-certificado2{
+    display: none;
+}
+
